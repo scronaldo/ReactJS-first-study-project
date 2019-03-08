@@ -11,6 +11,7 @@ const Header = (props) =>{
                     style={{color: 'orange', textAlign: 'center'}}
                     placeholder=' filter news by title ' 
                     type="text" 
+                    // function (method) we received from app class component
                     onChange={props.keywords}
                 />
             </header>

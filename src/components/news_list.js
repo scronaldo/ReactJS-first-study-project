@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsItem from './news_list_item';
 
-// func compo with props obj
+// func comp with props obj
 const NewsList = (props) =>{
 
     // create html markup based on news json object we got from index.js
@@ -9,10 +9,11 @@ const NewsList = (props) =>{
         return(
             // react prefer to have keys for array elements so we added key prop - object.id 
             <NewsItem key={item.id} item={item}/>
+            // so we got array with multiple <newsItem> components 
         )
     });
-    // now items is array with html templates for news
 
+    // now render them
     return (
         <div>
             {props.children}
@@ -21,4 +22,5 @@ const NewsList = (props) =>{
     )
 }
 
+// what we export by default (our functional component)
 export default NewsList;
